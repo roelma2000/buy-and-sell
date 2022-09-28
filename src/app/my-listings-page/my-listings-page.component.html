@@ -1,0 +1,14 @@
+
+<div class="content-box" *ngFor="let listinga of listing">
+    <h3>{{listinga.name}}</h3>
+    <p>{{listinga.description}}</p>
+    <p>${{listinga.price}}</p>
+    <div class="buttons-container">
+        <a routerLink="/edit-listing/{{listinga.id}}">
+            <button>Edit</button>
+        </a>
+        <button (click)="onDeleteClick(listinga.id)">Delete</button>
+    </div>
+
+</div>
+<a routerLink="/new-listing"><button>Create New Listing</button></a>
